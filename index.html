@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="style.css">
+
+
+<link rel="stylesheet"
+
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+<div class="logo">
+    <i class="fa-solid fa-cake-candles"></i>
+    <h2>Sweet Life</h2>
+</div>
+
+<nav>
+
+    <a href="#home">Головна</a>
+    <a href="#catalog">Каталог</a>
+    <a href="#about">Про нас</a>
+    <a href="#reviews">Відгуки</a>
+    <a href="#contacts">Контакти</a>
+
+</nav>
+
+
+
+</div>
+<div class="hero-text">
+
+    <h1>
+        Найсмачніші
+        <span>торти</span>
+        для будь-якого свята
+    </h1>
+
+    <p>
+        Авторські торти та десерти,
+        створені з любов'ю.
+    </p>
+
+    <button class="shop-btn">
+        Замовити зараз
+    </button>
+
+</div>
+
+<div class="hero-image">
+
+    <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=900"
+    alt="cake">
+
+</div>
+<div class="feature">
+    <i class="fa-solid fa-truck-fast"></i>
+    <h3>Швидка доставка</h3>
+</div>
+
+<div class="feature">
+    <i class="fa-solid fa-heart"></i>
+    <h3>Ручна робота</h3>
+</div>
+
+<div class="feature">
+    <i class="fa-solid fa-seedling"></i>
+    <h3>Натуральні продукти</h3>
+</div>
+
+<div class="feature">
+    <i class="fa-solid fa-award"></i>
+    <h3>Якість</h3>
+</div>
+<h2 class="title">Популярні торти</h2>
+
+<div class="search-box">
+
+    <input
+    type="text"
+    id="searchInput"
+    placeholder="Пошук торта...">
+
+</div>
+
+<div class="products">
+
+    <!-- PRODUCT 1 -->
+
+    <div class="product-card">
+
+        <img src="red.png">
+
+        <h3>Червоний оксамит</h3>
+
+        <p class="price">650 грн</p>
+
+        <div class="buttons">
+
+            <button class="details-btn">
+                Детальніше
+            </button>
+
+            <button class="add-cart">
+                До кошика
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- PRODUCT 2 -->
+
+    <div class="product-card">
+
+        <img src="chok.png">
+
+        <h3>Шоколадний рай</h3>
+
+        <p class="price">550 грн</p>
+
+        <div class="buttons">
+
+            <button class="details-btn">
+                Детальніше
+            </button>
+
+            <button class="add-cart">
+                До кошика
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- PRODUCT 3 -->
+
+    <div class="product-card">
+
+        <img src="strob.png">
+
+        <h3>Полунична мрія</h3>
+
+        <p class="price">590 грн</p>
+
+        <div class="buttons">
+
+            <button class="details-btn">
+                Детальніше
+            </button>
+
+            <button class="add-cart">
+                До кошика
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- PRODUCT 4 -->
+
+    <div class="product-card">
+
+        <img src="caramel.png">
+
+        <h3>Карамельний торт</h3>
+
+        <p class="price">700 грн</p>
+
+        <div class="buttons">
+
+            <button class="details-btn">
+                Детальніше
+            </button>
+
+            <button class="add-cart">
+                До кошика
+            </button>
+
+        </div>
+
+        <div id="cart-items"></div>
+
+            <h3 id="total-price">
+                Загалом: 0 грн
+            </h3>
+
+    </div>
+
+</div>
+<div class="about-image">
+
+    <img src="https://images.unsplash.com/photo-1556911220-bff31c812dba?w=900">
+
+</div>
+
+<div class="about-text">
+
+    <h2>Про нас</h2>
+
+    <p>
+        Sweet Life — це сучасна кондитерська,
+        яка створює десерти для особливих моментів.
+    </p>
+
+    <p>
+        Ми використовуємо тільки якісні
+        інгредієнти та авторські рецепти.
+    </p>
+
+    <button>
+        Дізнатись більше
+    </button>
+
+</div>
+<h2 class="title">
+    Відгуки клієнтів
+</h2>
+
+<div class="review-container">
+
+    <div class="review">
+
+        <h3>Марія</h3>
+
+        <p>
+            Дуже смачні торти!
+            Замовлятиму ще.
+        </p>
+        </div>
+
+    <div class="review">
+
+        <h3>Ірина</h3>
+
+        <p>
+            Найкраща кондитерська
+            у місті.
+        </p>
+
+    </div>
+
+    <div class="review">
+
+        <h3>Оксана</h3>
+
+        <p>
+            Гарний сервіс та швидка доставка.
+        </p>
+
+    </div>
+
+</div>
+<h2>Контакти</h2>
+
+<form id="contactForm">
+
+    <input
+    type="text"
+    placeholder="Ваше ім'я"
+    required>
+
+    <input
+    type="email"
+    placeholder="Email"
+    required>
+
+    <textarea
+    placeholder="Ваше повідомлення"
+    required></textarea>
+
+    <button type="submit">
+        Надіслати
+    </button>
+
+</form>
+<h2>Кошик</h2>
+
+<div id="cart-items"></div>
+
+<h3 id="total-price">
+    Загалом: 0 грн
+</h3>
+<h3>Sweet Life © 2026</h3>
+
+<div class="footer-container">
+
+    <!-- ЛОГОТИП -->
+
+    <div class="footer-column">
+
+        <div class="footer-logo">
+            🍰 <span>Sweet Life</span>
+        </div>
+
+        <p>
+            Солодощі для щасливих моментів.
+            Створюємо торти з любов'ю ❤️
+        </p>
+
+    </div>
+
+
+    <!-- МЕНЮ -->
+
+    <div class="footer-column">
+
+        <h3>Меню</h3>
+
+        <a href="#home">Головна</a>
+
+        <a href="#catalog">Каталог</a>
+
+        <a href="#about">Про нас</a>
+
+        <a href="#reviews">Відгуки</a>
+
+        <a href="#contacts">Контакти</a>
+
+    </div>
+
+
+    <!-- КОНТАКТИ -->
+
+    <div class="footer-column">
+
+        <h3>Контакти</h3>
+
+        <a href="tel:+380991234567">
+            📞 +38 (099) 123 45 67
+        </a>
+
+        <a href="mailto:sweetlife@gmail.com">
+            ✉️ sweetlife@gmail.com
+        </a>
+
+        <p>
+            📍 м. Львів,<br>
+            вул. Солодка, 15
+        </p>
+
+    </div>
+
+
+    <!-- СОЦМЕРЕЖІ -->
+
+    <div class="footer-column">
+
+        <h3>Ми в соцмережах</h3>
+
+        <p>
+            Слідкуйте за нами
+            та не пропускайте новинки 🍰
+        </p>
+
+        <div class="socials">
+
+            <a href="#" class="social">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+
+            <a href="#" class="social">
+                <i class="fa-brands fa-facebook"></i>
+            </a>
+
+            <a href="#" class="social">
+                <i class="fa-brands fa-tiktok"></i>
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- НИЖНЯ ЧАСТИНА -->
+
+<div class="footer-bottom">
+
+    <p>
+        © 2025 Sweet Life. Усі права захищені.
+    </p>
+
+    <div>
+
+        <a href="#">
+            Політика конфіденційності
+        </a>
+
+        <a href="#">
+            Умови використання
+        </a>
+
+    </div>
+
+
+</div>
+<script src="code.js"></script>
+</body>
+</html>
