@@ -44,38 +44,55 @@ button.addEventListener("click", () => {
 function updateCart() {
 cartItems.innerHTML = "";
 
-cart.forEach((item, index) => {
+if (cart.length === 0) {
+    const empty = document.createElement("p");
+    empty.className = "cart-empty";
+    empty.textContent = "Кошик порожній";
+    cartItems.appendChild(empty);
+} else {
+    cart.forEach((item, index) => {
+        const div = document.createElement("div");
+        div.className = "cart-item";
 
-    const div =
-        document.createElement("div");
+        const label = document.createElement("span");
+        label.textContent = item.name + " — " + item.price + " грн";
 
-    div.innerHTML = `
-        <p>
-        ${item.name}
-        - ${item.price} грн
-        <button onclick="removeItem(${index})">
-        ❌
-        </button>
-        </p>
-    `;
+        const btn = document.createElement("button");
+        btn.className = "remove-item";
+        btn.textContent = "✕";
+        btn.dataset.index = index;
 
-    cartItems.appendChild(div);
-
-});
+        div.appendChild(label);
+        div.appendChild(btn);
+        cartItems.appendChild(div);
+    });
+}
 
 cartCount.textContent = cart.length;
 
 totalPrice.textContent =
     "Загалом: " + total + " грн";
 }
-// ВИДАЛЕННЯ ТОВАРУ
-function removeItem(index) {
-total -= cart[index].price;
+// ВИДАЛЕННЯ ТОВАРУ (делегування)
+cartItems.addEventListener("click", (e) => {
+    const btn = e.target.closest(".remove-item");
+    if (!btn) return;
 
-cart.splice(index, 1);
+    const index = Number(btn.dataset.index);
 
-updateCart();
-}
+    total -= cart[index].price;
+
+    cart.splice(index, 1);
+
+    updateCart();
+});
+// ОЧИСТКА КОШИКА
+const clearButton = document.querySelector(".clear-cart");
+clearButton.addEventListener("click", () => {
+    cart = [];
+    total = 0;
+    updateCart();
+});
 // ПОШУК
 const searchInput = document.getElementById("searchInput");
 searchInput.addEventListener("keyup", () => {
@@ -242,7 +259,7 @@ card.addEventListener(
 );
 });
 // ЗБЕРЕЖЕННЯ КОШИКА
-window.addEventListener( "beforeunload", () => {
+function saveCart() {
     localStorage.setItem(
         "sweetLifeCart",
         JSON.stringify(cart)
@@ -252,9 +269,8 @@ window.addEventListener( "beforeunload", () => {
         "sweetLifeTotal",
         total
     );
-
 }
-);
+window.addEventListener( "beforeunload", saveCart );
 // ЗАВАНТАЖЕННЯ КОШИКА
 window.addEventListener( "load", () => {
     const savedCart =

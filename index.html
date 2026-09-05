@@ -9,80 +9,85 @@
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-<div class="logo">
-    <i class="fa-solid fa-cake-candles"></i>
-    <h2>Sweet Life</h2>
-</div>
+<header>
+    <div class="logo">
+        <i class="fa-solid fa-cake-candles"></i>
+        <h2>Sweet Life</h2>
+    </div>
 
-<nav>
+    <nav>
+        <a href="#home">Головна</a>
+        <a href="#catalog">Каталог</a>
+        <a href="#about">Про нас</a>
+        <a href="#reviews">Відгуки</a>
+        <a href="#contacts">Контакти</a>
+    </nav>
 
-    <a href="#home">Головна</a>
-    <a href="#catalog">Каталог</a>
-    <a href="#about">Про нас</a>
-    <a href="#reviews">Відгуки</a>
-    <a href="#contacts">Контакти</a>
+    <div class="header-icons">
+        <div class="cart-btn">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span id="cart-count">0</span>
+        </div>
+    </div>
+</header>
 
-</nav>
+<section class="hero" id="home">
+    <div class="hero-text">
+        <h1>
+            Найсмачніші
+            <span>торти</span>
+            для будь-якого свята
+        </h1>
 
+        <p>
+            Авторські торти та десерти,
+            створені з любов'ю.
+        </p>
 
+        <button class="shop-btn">
+            Замовити зараз
+        </button>
+    </div>
 
-</div>
-<div class="hero-text">
+    <div class="hero-image">
+        <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=900"
+        alt="cake">
+    </div>
+</section>
 
-    <h1>
-        Найсмачніші
-        <span>торти</span>
-        для будь-якого свята
-    </h1>
+<section class="features">
+    <div class="feature">
+        <i class="fa-solid fa-truck-fast"></i>
+        <h3>Швидка доставка</h3>
+    </div>
 
-    <p>
-        Авторські торти та десерти,
-        створені з любов'ю.
-    </p>
+    <div class="feature">
+        <i class="fa-solid fa-heart"></i>
+        <h3>Ручна робота</h3>
+    </div>
 
-    <button class="shop-btn">
-        Замовити зараз
-    </button>
+    <div class="feature">
+        <i class="fa-solid fa-seedling"></i>
+        <h3>Натуральні продукти</h3>
+    </div>
 
-</div>
+    <div class="feature">
+        <i class="fa-solid fa-award"></i>
+        <h3>Якість</h3>
+    </div>
+</section>
 
-<div class="hero-image">
+<section class="catalog" id="catalog">
+    <h2 class="title">Популярні торти</h2>
 
-    <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=900"
-    alt="cake">
+    <div class="search-box">
+        <input
+        type="text"
+        id="searchInput"
+        placeholder="Пошук торта...">
+    </div>
 
-</div>
-<div class="feature">
-    <i class="fa-solid fa-truck-fast"></i>
-    <h3>Швидка доставка</h3>
-</div>
-
-<div class="feature">
-    <i class="fa-solid fa-heart"></i>
-    <h3>Ручна робота</h3>
-</div>
-
-<div class="feature">
-    <i class="fa-solid fa-seedling"></i>
-    <h3>Натуральні продукти</h3>
-</div>
-
-<div class="feature">
-    <i class="fa-solid fa-award"></i>
-    <h3>Якість</h3>
-</div>
-<h2 class="title">Популярні торти</h2>
-
-<div class="search-box">
-
-    <input
-    type="text"
-    id="searchInput"
-    placeholder="Пошук торта...">
-
-</div>
-
-<div class="products">
+    <div class="products">
 
     <!-- PRODUCT 1 -->
 
@@ -178,109 +183,113 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 
         </div>
 
-        <div id="cart-items"></div>
-
-            <h3 id="total-price">
-                Загалом: 0 грн
-            </h3>
-
     </div>
 
 </div>
-<div class="about-image">
+</section>
 
-    <img src="https://images.unsplash.com/photo-1556911220-bff31c812dba?w=900">
+<section class="about" id="about">
+    <div class="about-image">
 
-</div>
+        <img src="https://images.unsplash.com/photo-1556911220-bff31c812dba?w=900">
 
-<div class="about-text">
+    </div>
 
-    <h2>Про нас</h2>
+    <div class="about-text">
 
-    <p>
-        Sweet Life — це сучасна кондитерська,
-        яка створює десерти для особливих моментів.
-    </p>
-
-    <p>
-        Ми використовуємо тільки якісні
-        інгредієнти та авторські рецепти.
-    </p>
-
-    <button>
-        Дізнатись більше
-    </button>
-
-</div>
-<h2 class="title">
-    Відгуки клієнтів
-</h2>
-
-<div class="review-container">
-
-    <div class="review">
-
-        <h3>Марія</h3>
+        <h2>Про нас</h2>
 
         <p>
-            Дуже смачні торти!
-            Замовлятиму ще.
+            Sweet Life — це сучасна кондитерська,
+            яка створює десерти для особливих моментів.
         </p>
+
+        <p>
+            Ми використовуємо тільки якісні
+            інгредієнти та авторські рецепти.
+        </p>
+
+        <button>
+            Дізнатись більше
+        </button>
+
+    </div>
+</section>
+
+<section class="reviews" id="reviews">
+    <h2 class="title">
+        Відгуки клієнтів
+    </h2>
+
+    <div class="review-container">
+
+        <div class="review">
+
+            <h3>Марія</h3>
+
+            <p>
+                Дуже смачні торти!
+                Замовлятиму ще.
+            </p>
+            </div>
+
+        <div class="review">
+
+            <h3>Ірина</h3>
+
+            <p>
+                Найкраща кондитерська
+                у місті.
+            </p>
+
         </div>
 
-    <div class="review">
+        <div class="review">
 
-        <h3>Ірина</h3>
+            <h3>Оксана</h3>
 
-        <p>
-            Найкраща кондитерська
-            у місті.
-        </p>
+            <p>
+                Гарний сервіс та швидка доставка.
+            </p>
 
-    </div>
-
-    <div class="review">
-
-        <h3>Оксана</h3>
-
-        <p>
-            Гарний сервіс та швидка доставка.
-        </p>
+        </div>
 
     </div>
+</section>
 
+<section class="contacts" id="contacts">
+    <h2>Контакти</h2>
+
+    <form id="contactForm">
+
+        <input
+        type="text"
+        placeholder="Ваше ім'я"
+        required>
+
+        <input
+        type="email"
+        placeholder="Email"
+        required>
+
+        <textarea
+        placeholder="Ваше повідомлення"
+        required></textarea>
+
+        <button type="submit">
+            Надіслати
+        </button>
+
+    </form>
+</section>
+
+<!-- МОДАЛКА КОШИКА -->
+<div class="cart-modal" id="cartModal">
+    <h3>Кошик</h3>
+    <div id="cart-items"></div>
+    <h3 id="total-price">Загалом: 0 грн</h3>
+    <button class="clear-cart">Очистити кошик</button>
 </div>
-<h2>Контакти</h2>
-
-<form id="contactForm">
-
-    <input
-    type="text"
-    placeholder="Ваше ім'я"
-    required>
-
-    <input
-    type="email"
-    placeholder="Email"
-    required>
-
-    <textarea
-    placeholder="Ваше повідомлення"
-    required></textarea>
-
-    <button type="submit">
-        Надіслати
-    </button>
-
-</form>
-<h2>Кошик</h2>
-
-<div id="cart-items"></div>
-
-<h3 id="total-price">
-    Загалом: 0 грн
-</h3>
-<h3>Sweet Life © 2026</h3>
 
 <div class="footer-container">
 
